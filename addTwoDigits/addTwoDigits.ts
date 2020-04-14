@@ -1,5 +1,5 @@
-function addTwoDigits(n: any): number {
-  return n
+function addTwoDigits(number: number): number {
+  return number
     .toString()
     .split('')
     .reduce((acc: number, val: string) => 

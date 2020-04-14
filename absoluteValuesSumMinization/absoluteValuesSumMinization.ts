@@ -1,6 +1,6 @@
 function absoluteValuesSumMinimization(a: number[]): number {
 //  return a.length % 2 === 0 
-//    ? a[Math.floor(a.length / 2) - 1]
+//    ? a[a.length / 2 - 1]
 //    : a[Math.floor(a.length / 2)]
     
     const arrayLength: number = a.length

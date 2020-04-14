@@ -12,4 +12,4 @@ console.log(add(1, 2)); // 3
 console.log(add(3, 2)); // 5
 console.log(add2(1, 2, 3, 4, 5)); // 15
 console.log(add2(2, 3)); // 5
-console.log(add2(1, 2, 3, 4, 5, 3, 54, 5, 67, 5, 3, 34, 4224, 4)); // 15
+console.log(add2(1)); // 5
