@@ -1,4 +1,4 @@
-function alphabeticShift(inputString: string): string {
+const alphabeticShift = (inputString: string): string => {
   return inputString.split('').map((x,i) => {
     if(x.charCodeAt(0) === 122) {
       return String.fromCharCode(97)
