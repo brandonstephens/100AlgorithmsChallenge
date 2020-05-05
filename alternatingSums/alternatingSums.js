@@ -1,10 +1,10 @@
 var alternatingSums = function (a) {
     return a.reduce(function (acc, val, index) {
-        if (index % 2 !== 0) {
-            acc[1] += val;
+        if (index % 2 === 0) {
+            acc[0] += val;
         }
         else {
-            acc[0] += val;
+            acc[1] += val;
         }
         return acc;
     }, [0, 0]);

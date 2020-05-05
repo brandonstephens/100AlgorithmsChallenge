@@ -1,9 +1,9 @@
 const alternatingSums = (a: number[]): number[] => {
   return a.reduce((acc, val, index) => {
-    if(index % 2 !== 0) {
-      acc[1] += val
-    } else {
+    if(index % 2 === 0) {
       acc[0] += val
+    } else {
+      acc[1] += val
     }
     return acc
   }, [0,0])
