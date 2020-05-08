@@ -4,7 +4,9 @@ const arrayConversion = (inputArray: number[], pass: number = 1): number => {
   }
 
   const outputArray = inputArray.reduce((acc, val, index) => {
-    if (index === 0 || index % 2 == 0) {
+    const isEven: boolean = index === 0 || index % 2 == 0
+
+    if (isEven) {
       acc = (pass % 2) !== 0
         ? [...acc, val + (inputArray[index + 1] || 0)]
         : [...acc, val * (inputArray[index + 1] || 1)]
