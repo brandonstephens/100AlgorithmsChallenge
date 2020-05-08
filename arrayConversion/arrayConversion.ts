@@ -9,6 +9,7 @@ const arrayConversion = (inputArray: number[], pass: number = 1): number => {
         ? [...acc, val + (inputArray[index + 1] || 0)]
         : [...acc, val * (inputArray[index + 1] || 1)]
     }
+    
     return acc
   }, [])
 
