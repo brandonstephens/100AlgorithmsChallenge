@@ -1,24 +1,17 @@
 const arrayMaxConsecutiveSum = (inputArray: number[], k: number): number => {
-  let obj: {index: number, sum: number} = {
-    index: 0,
-    sum: 0
-  }
-
+  let sum: number = 0
   let i: number = 0
+
   while (i < inputArray.length) {
-    const sum: number = inputArray.slice(i, i+k).reduce((acc, val) => {
+    const newSum: number = inputArray.slice(i, i + k).reduce((acc, val) => {
       return acc + val
     }, 0)
 
-    obj = {
-      index: sum > obj.sum ? i : obj.index,
-      sum: sum > obj.sum ? sum : obj.sum
-    }
-
+    sum = newSum > sum ? newSum : sum
     i++
   }
 
-  return obj.sum
+  return sum
 }
 
 // 8
