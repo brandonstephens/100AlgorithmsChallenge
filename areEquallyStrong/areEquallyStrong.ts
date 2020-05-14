@@ -1,5 +1,15 @@
-const areEquallyStrong = (yourLeft: number, yourRight: number, friendsLeft: number, friendsRight: number): boolean => {
-  return yourLeft + yourRight === friendsLeft + friendsRight
+const areEquallyStrong = (yourLeft: number, yourRight: number, friendsLeft: number, friendsRight: number): boolean => {  
+  if(yourLeft + yourRight !== friendsLeft + friendsRight) {
+    return false
+  }
+  
+  const yourStrongest = yourRight >= yourLeft ? yourRight : yourLeft
+  const friendsStrongest = friendsRight >= friendsLeft ? friendsRight : friendsLeft
+  if(yourStrongest !== friendsStrongest) {
+    return false
+  }
+  
+  return true
 }
 
 // true
@@ -10,3 +20,6 @@ const areEquallyStrong = (yourLeft: number, yourRight: number, friendsLeft: numb
 
 //false
  console.log(areEquallyStrong(15, 10, 15, 9))
+
+//false
+ console.log(areEquallyStrong(15, 10, 14, 11))
